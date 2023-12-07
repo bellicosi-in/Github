@@ -1,9 +1,22 @@
 def recursion(x):
-    while(x!=2) and x is not None:
+    while(x!=2):
         print(x)
+        print("recursion")
         x=x-1
-        return recursion(x)
+        # while x is not None:
+
+        recursion(x)
+        return x
     
 
 
-recursion(recursion(8))
+recursion(8)
+
+
+def run(x):
+    print("double recursion")
+    if x is not None:
+        return recursion(x)+ recursion(x*2)
+
+
+run(5)
