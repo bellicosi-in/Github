@@ -1,8 +1,9 @@
 def recursion(x):
-    while(x!=2):
+    while(x!=2) and x is not None:
         print(x)
         x=x-1
         return recursion(x)
     
 
-recursion(8)
+
+recursion(recursion(8))
